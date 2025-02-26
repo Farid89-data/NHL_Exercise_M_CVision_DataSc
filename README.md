@@ -74,3 +74,34 @@ Swapped coordinates:
  [ 5  6 16 13  1]]
 ```
 
+## Exercise 3: Fixed Precision-Recall Curve Plotting
+
+### Problem Description
+The original function was attempting to plot a precision-recall curve from CSV data, but had several issues:
+1. The axes were swapped compared to the function description
+2. The CSV header row was being treated as data
+3. The plot had incorrect axis ranges and orientation
+
+### Solution
+The function was modified to:
+1. Skip the header row when reading the CSV file
+2. Convert data to float explicitly
+3. Correctly plot precision on the x-axis and recall on the y-axis
+4. Set appropriate axis limits (0 to 1.05 for both axes)
+5. Add a title and grid for better readability
+
+### Key Insights
+- When reading data from CSV files, headers should be handled properly
+- Data type conversion is important for numerical operations
+- Appropriate axis limits and labels are essential for meaningful data visualization
+- Precision-recall curves typically have both axes ranging from 0 to 1
+
+### Usage
+```python
+# Create a CSV file with precision-recall data
+# Format: "precision,recall" with a header row
+plot_data("path_to_your_precision_recall_data.csv")
+```
+### Output
+
+![image](https://github.com/user-attachments/assets/05809ba2-5ddc-4b07-a757-d6af816e5c0a)

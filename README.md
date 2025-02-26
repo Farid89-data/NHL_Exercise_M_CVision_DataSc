@@ -105,3 +105,34 @@ plot_data("path_to_your_precision_recall_data.csv")
 ### Output
 
 ![image](https://github.com/user-attachments/assets/05809ba2-5ddc-4b07-a757-d6af816e5c0a)
+
+## Exercise 4: Fixed GAN Implementation for MNIST Digit Generation
+
+### Problem Description
+The original GAN implementation had two bugs:
+1. A structural bug that appeared when changing the batch size from 32 to 64, causing a ValueError due to inconsistent tensor dimensions
+2. A cosmetic bug related to tensor reshaping that affected the visual quality of the generated outputs
+
+### Solution
+The implementation was fixed by:
+1. Correctly handling variable batch sizes throughout the training process
+2. Ensuring consistent tensor reshaping, especially when passing data between the Generator and Discriminator
+3. Improving the training loop to handle the last batch of each epoch correctly
+
+### Key Insights
+- GANs are sensitive to tensor dimensions, and inconsistencies can easily cause training failures
+- Dynamic batch sizing is necessary to handle the last batch in each epoch, which may be smaller than the specified batch size
+- Proper reshaping is crucial when working with image data in GANs
+- Consistent handling of data shapes through the generator-discriminator pipeline is essential
+
+### Usage
+```python
+# Train with default parameters
+train_gan()
+
+# Train with custom parameters
+train_gan(batch_size=64, num_epochs=100, device="cuda:0")
+
+### Output
+
+![image_2025-02-26_13-32-46](https://github.com/user-attachments/assets/d37944fe-55fc-4daa-92b0-6b908caf61c5)

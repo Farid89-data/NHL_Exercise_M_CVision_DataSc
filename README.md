@@ -1,3 +1,4 @@
+
 # Debugging Exercises
 
 This repository contains a series of Python debugging exercises for the NHL Stenden Master's program in Computer Vision & Data Science (2025-2026).
@@ -136,3 +137,12 @@ train_gan(batch_size=64, num_epochs=100, device="cuda:0")
 ### Output
 
 ![image_2025-02-26_13-32-46](https://github.com/user-attachments/assets/d37944fe-55fc-4daa-92b0-6b908caf61c5)
+
+### Installation and Usage
+Clone the repository and install required dependencies:
+Clone the repository and install required dependencies:
+```pyton
+git clone https://github.com/Farid89-data/NHL_Exercise_M_CVision_DataSc.git
+cd NHL_Exercise_M_CVision_DataSc
+pip install -r requirements.txt
+```

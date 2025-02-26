@@ -132,7 +132,7 @@ train_gan()
 
 # Train with custom parameters
 train_gan(batch_size=64, num_epochs=100, device="cuda:0")
-
+```
 ### Output
 
 ![image_2025-02-26_13-32-46](https://github.com/user-attachments/assets/d37944fe-55fc-4daa-92b0-6b908caf61c5)
